@@ -49,7 +49,7 @@ jobs:
           -p'${{ secrets.PASS }}' \
           --ssl-mode=REQUIRED \
           < script_techstore.sql
-    - name: Ligar ao mysql
+    - name: Mostrar as BD
       run: |
         mysql -h "${{ github.event.inputs.name }}" \
           -u "${{ secrets.USER }}" \
