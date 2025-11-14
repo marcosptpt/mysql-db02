@@ -46,6 +46,6 @@ jobs:
       run: |
         mysql -h "${{ github.event.inputs.name }}" \
           -u "${{ secrets.USER }}" \
-          -p"${{ secrets.PASS }}" \
+          -p'${{ secrets.PASS }}' \
           --ssl-mode=REQUIRED \
           < script_techstore.sql
