@@ -45,5 +45,7 @@ jobs:
     - name: Ligar ao mysql
       run: |
         mysql -h "${{ github.event.inputs.name }}" \
-            -u "${{ secrets.USER }}" \
-            -p"${{ secrets.PASS }}"
+          -u "${{ secrets.USER }}" \
+          -p"${{ secrets.PASS }}" \
+          --ssl-mode=REQUIRED \
+          < script.sql
